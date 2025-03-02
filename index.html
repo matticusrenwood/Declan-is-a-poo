@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECLAN IS A POO!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    DECLAN IS A POO!
+    <audio id="pooAudio" autoplay>
+        <source src="https://drive.google.com/uc?export=download&id=124o1AEwUrhZTwWLTG3tTSZUnMlvO2hVJ" type="audio/aiff">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            let audio = document.getElementById("pooAudio");
+            audio.play().catch(error => {
+                console.log("Autoplay failed, user interaction needed.", error);
+            });
+        };
+    </script>
+</body>
+</html>
