@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,18 +21,19 @@
 </head>
 <body>
     DECLAN IS A POO!
-    <audio id="pooAudio" autoplay>
+    
+    <audio id="pooAudio" autoplay controls>
         <source src="https://drive.google.com/uc?export=download&id=124o1AEwUrhZTwWLTG3tTSZUnMlvO2hVJ" type="audio/aiff">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        window.onload = function() {
+        document.addEventListener("click", function() {
             let audio = document.getElementById("pooAudio");
             audio.play().catch(error => {
                 console.log("Autoplay failed, user interaction needed.", error);
             });
-        };
+        });
     </script>
 </body>
 </html>
